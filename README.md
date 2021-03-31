@@ -26,7 +26,7 @@ Use the Spotify API to fetch and display the following items:
 - Do you implement state management using something like Redux?
 - How much logic do you offload out of the UI components?
 
-We don't want to restrict you too much so feel free to scope the project to your time and needs.
+We don't want to restrict you too much so feel free to scope the project to your time and needs (usually it takes around 1-2 hours).
 However; make sure there is enough code (written by yourself) to explain your design and approach.
 
 *Be creative, be awesome!*
