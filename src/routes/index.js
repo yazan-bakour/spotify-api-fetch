@@ -1,10 +1,12 @@
-import React, { Children } from "react";
+import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Discover from "./Discover";
 import Search from "./Search";
 import ErrorPage from "../common/components/ErrorMessage/ErrorPage";
 import CoreLayout from "../common/layouts/CoreLayout";
 import Charts from "./Charts/Charts";
+import Playlists from "./Playlists/Playlists";
+import Favourites from "./Favourites";
 
 const router = createBrowserRouter([
   {
@@ -24,18 +26,18 @@ const router = createBrowserRouter([
       },
       {
         path: "/favourites",
-        element: '',
+        element: <Favourites />,
         errorElement: <ErrorPage />
       },
       {
         path: "/playlists",
-        element: '',
+        element: <Playlists />,
         errorElement: <ErrorPage />
       },
       {
         path: "/charts",
-        element: '',
-        errorElement: <Charts />
+        element: <Charts />,
+        errorElement: <ErrorPage />
       }
     ]
   }

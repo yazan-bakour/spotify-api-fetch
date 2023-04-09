@@ -1,8 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faChevronRight, faExclamationTriangle, faWindowClose } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import DiscoverItem from './DiscoverItem';
-import { Skeleton } from '@timechimp/tacugama';
 import '../styles/_discover-block.scss';
 
 function scrollContainer(id, { isNegative } = {}) {

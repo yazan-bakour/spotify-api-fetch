@@ -14,8 +14,7 @@ import {fetchApi} from "../../../api";
 import { ErrorAlert } from '@timechimp/tacugama';
 import { NavLink } from "react-router-dom"
 
-function renderSideBarOption(pageLink, icon, text, { selected } = {}) {
-  // console.log(selected)
+function renderSideBarOption(pageLink, icon, text) {
   return (
     <NavLink onClick={onclick} to={pageLink} className={({isActive}) => cx('sidebar__option', { 'sidebar__option--selected': isActive })}>
       <FontAwesomeIcon icon={icon} />
@@ -24,22 +23,12 @@ function renderSideBarOption(pageLink, icon, text, { selected } = {}) {
   )
 }
 class SideBar extends Component {
-  constructor() {
-    super()
 
-    this.state ={
-      selected: '/'
-    }
-
-  }
   unsubscribeSearch = null;
 
   componentDidMount() {
     const { getUser } = this.props;
     const { unsubscribe: unsubscribeSearch } = getUser(3);
-    const pathName = window.location.pathname
-
-    this.setState({ selected: pathName })
 
     this.unsubscribeSearch = unsubscribeSearch;
   }
@@ -47,13 +36,6 @@ class SideBar extends Component {
   componentWillUnmount() {
     this.unsubscribeSearch?.();
   }
-
-  // handleSelected(link) {
-  //   const pathName = window.location.pathname
-  //   if (pathName === link) {
-  //     this.setState({ selected: true })
-  //   }
-  // }
 
   render() {
     const { user } = this.props
@@ -66,11 +48,11 @@ class SideBar extends Component {
         }
         <Profile me={user} />
         <div className="sidebar__options">
-          {renderSideBarOption('/', faHeadphonesAlt, 'Discover', { selected: this.state.selected })}
-          {renderSideBarOption('/search', faSearch, 'Search', { selected: this.state.selected })}
-          {renderSideBarOption('/favourites', faHeart, 'Favourites', { selected: this.state.selected })}
-          {renderSideBarOption('/playlists', faPlayCircle, 'Playlists', { selected: this.state.selected })}
-          {renderSideBarOption('/charts', faStream, 'Charts', { selected: this.state.selected })}
+          {renderSideBarOption('/', faHeadphonesAlt, 'Discover')}
+          {renderSideBarOption('/search', faSearch, 'Search')}
+          {renderSideBarOption('/favourites', faHeart, 'Favourites')}
+          {renderSideBarOption('/playlists', faPlayCircle, 'Playlists')}
+          {renderSideBarOption('/charts', faStream, 'Charts')}
         </div>
       </div>
     );

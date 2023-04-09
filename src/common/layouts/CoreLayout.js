@@ -5,6 +5,7 @@ import Player from '../components/Player';
 import { Outlet } from 'react-router-dom';
 
 function CoreLayout({ history }) {
+
   return (
     <div className="main">
       <SideBar  history={history} />

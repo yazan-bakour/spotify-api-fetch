@@ -47,14 +47,7 @@ class Discover extends Component {
       <div className="search">
         <div className='__input'>
           <SearchInput
-            endEnhancer=""
-            onBlur={function noRefCheck(){}}
             onChange={e => handleSearch(e.target.value)}
-            onClear={function noRefCheck(){}}
-            onFocus={function noRefCheck(){}}
-            onKeyDown={function noRefCheck(){}}
-            onKeyPress={function noRefCheck(){}}
-            onKeyUp={function noRefCheck(){}}
             placeholder="Type to search"
             testId="test-input"
             value={this.state.searchValue}
