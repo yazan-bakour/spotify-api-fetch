@@ -43,6 +43,7 @@
     padding-left: 40px;
     padding-right: 40px;
     user-select: none;
+    text-decoration: none;
 
     @media only screen and (max-width: 650px) {
       padding-left: 30px;
@@ -81,6 +82,9 @@
     font-weight: 300;
     margin-bottom: 50px;
     margin-top: 20px;
+    > p {
+      text-align: center;
+    }
 
     @media only screen and (max-width: 650px) {
       > p {

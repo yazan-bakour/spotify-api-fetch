@@ -1,0 +1,21 @@
+.search {
+    .__input {
+        position: fixed;
+        z-index: 3;
+        width: 80%;
+        top: 45px;
+    }
+}
+.content {
+    .__row {
+        display: flex;
+    margin-bottom: 50px;
+    width: 100%;
+    overflow-x: scroll;
+    /* height: 250px; */
+    scroll-behavior: smooth;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    }
+}
+  

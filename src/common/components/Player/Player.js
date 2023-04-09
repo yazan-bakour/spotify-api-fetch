@@ -11,8 +11,11 @@ import { faRandom } from '@fortawesome/free-solid-svg-icons';
 import { faRetweet } from '@fortawesome/free-solid-svg-icons';
 import { faVolumeDown } from '@fortawesome/free-solid-svg-icons';
 import './_player.scss';
+// import { fetchApi } from '../../../api';
 
 export default function Player() {
+  // const data = fetchApi.endpoints.getPlayer.useQuery()
+  // console.log(data);
   return (
     <div className="player">
       <div className="player__album">

@@ -55,4 +55,11 @@ body,
       }
     }
   }
+  .snackbar {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 3;
+  }
 }
